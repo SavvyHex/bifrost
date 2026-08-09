@@ -616,12 +616,11 @@
     },
     "templates": {
       "activeTemplates": [
-        {
-          "enabled": true,
-          "id": "kitty"
-        }
+        { "enabled": true, "id": "kitty" },
+        { "enabled": true, "id": "gtk" },
+        { "enabled": true, "id": "qt6ct" }
       ],
-      "enableUserTheming": false
+      "enableUserTheming": true
     },
     "nightLight": {
       "enabled": false,

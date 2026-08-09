@@ -50,7 +50,13 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
     wget
     git
     tree
+
+    adwaita-icon-theme
+    papirus-icon-theme
+    hicolor-icon-theme
   ];
+
+   environment.variables.XDG_DATA_DIRS = "$XDG_DATA_DIRS:${pkgs.papirus-icon-theme}/share";
 
    services.openssh.enable = true;
 
