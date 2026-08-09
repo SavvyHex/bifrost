@@ -18,7 +18,7 @@
 
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
-          "Mod+Q".close-window = null;
+          "Mod+Q".close-window = { };
         };
       };
     };
