@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.myMachine = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.thor = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.thorConfiguration
     ];
