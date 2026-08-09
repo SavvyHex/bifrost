@@ -2,6 +2,7 @@
 flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
   imports = [ 
       self.nixosModules.thorHardware
+      self.nixosModules.niri
     ];
 
   boot.loader.grub.enable = true;
