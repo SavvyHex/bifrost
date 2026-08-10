@@ -3,6 +3,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
   imports = [ 
       self.nixosModules.thorHardware
       self.nixosModules.niri
+      self.nixosModules.ly
     ];
 
   boot.loader.grub.enable = true;
@@ -55,8 +56,6 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
     papirus-icon-theme
     hicolor-icon-theme
   ];
-
-   environment.variables.XDG_DATA_DIRS = "$XDG_DATA_DIRS:${pkgs.papirus-icon-theme}/share";
 
    services.openssh.enable = true;
 
