@@ -61,16 +61,35 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
     mission-center
     networkmanagerapplet
     awww
+    jq
+    glib
+    gtk3
+    gtk4
+    gsettings-desktop-schemas
 
     adwaita-icon-theme
     papirus-icon-theme
     hicolor-icon-theme
   ];
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+  ];
+
   fonts.packages = with pkgs; [
     material-symbols
     nerd-fonts.jetbrains-mono   
   ];
+
+   environment.variables.GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
+   environment.variables.LD_LIBRARY_PATH = environment.variables.LD_LIBRARY_PATH = lib.makeLibraryPath [
+     pkgs.stdenv.cc.cc.lib
+     pkgs.zlib
+   ]; 
+
+   programs.dconf.enable = true;
 
    services.openssh.enable = true;
 
