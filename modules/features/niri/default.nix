@@ -9,6 +9,8 @@
       wl-clipboard
       cliphist
       polkit_gnome
+      glib
+      jq
     ];
   };
 

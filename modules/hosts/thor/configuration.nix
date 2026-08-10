@@ -49,8 +49,19 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     vim 
     wget
+    python
+    python3
     git
     tree
+    uv
+    easyeffects
+    yt-dlp
+    blueman
+    swaylock
+    swayidle
+    mission-center
+    networkmanagerapplet
+    awww
 
     adwaita-icon-theme
     papirus-icon-theme

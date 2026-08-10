@@ -18,6 +18,7 @@
       programs.inir = {
         enable = true;
         service.compositor = "niri";
+        configSymlink.enable = true;
       };
     };
   };
