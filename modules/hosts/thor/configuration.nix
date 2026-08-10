@@ -57,6 +57,11 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
     hicolor-icon-theme
   ];
 
+  fonts.packages = with pkgs; [
+    material-symbols
+    nerd-fonts.jetbrains-mono   
+  ];
+
    services.openssh.enable = true;
 
   system.stateVersion = "26.05";
