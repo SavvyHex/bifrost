@@ -49,7 +49,6 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     vim 
     wget
-    python
     python3
     git
     tree
