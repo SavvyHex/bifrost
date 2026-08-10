@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
+flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
   imports = [ 
       self.nixosModules.thorHardware
       self.nixosModules.niri
@@ -66,6 +66,8 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
     gtk3
     gtk4
     gsettings-desktop-schemas
+    coreutils
+    bash
 
     adwaita-icon-theme
     papirus-icon-theme
@@ -84,7 +86,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, ... }: {
   ];
 
    environment.variables.GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
-   environment.variables.LD_LIBRARY_PATH = environment.variables.LD_LIBRARY_PATH = lib.makeLibraryPath [
+   environment.variables.LD_LIBRARY_PATH = lib.makeLibraryPath [
      pkgs.stdenv.cc.cc.lib
      pkgs.zlib
    ]; 
