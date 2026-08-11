@@ -6,11 +6,17 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
       self.nixosModules.ly
     ];
 
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    efiInstallAsRemovable = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+    };
+
+    efi = {
+      canTouchEfiVariables = true;
+    }
   };
 
   networking.hostName = "thor";
@@ -71,6 +77,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     gsettings-desktop-schemas
     coreutils
     bash
+    vscode
 
     adwaita-icon-theme
     papirus-icon-theme

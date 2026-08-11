@@ -14,6 +14,8 @@
 
     inir.url = "github:snowarch/inir";
     inir.inputs.nixpkgs.follows = "nixpkgs";
+
+    zen-browser.url = "github:youwen5/zen-browser-flake";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
