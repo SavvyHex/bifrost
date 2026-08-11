@@ -16,7 +16,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
 
     efi = {
       canTouchEfiVariables = true;
-    }
+    };
   };
 
   networking.hostName = "thor";
