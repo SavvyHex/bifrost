@@ -7,6 +7,8 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     ];
 
   boot.loader = {
+    systemd-boot.enable = false;
+
     grub = {
       enable = true;
       device = "nodev";
