@@ -11,7 +11,6 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
       enable = true;
       device = "nodev";
       efiSupport = true;
-      efiInstallAsRemovable = true;
     };
 
     efi = {
