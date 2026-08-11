@@ -77,6 +77,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     coreutils
     bash
     vscode
+    nautilus
 
     adwaita-icon-theme
     papirus-icon-theme
