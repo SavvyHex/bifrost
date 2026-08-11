@@ -70,7 +70,7 @@ binds {
     Mod+T { spawn "inir" "terminal"; }
     Mod+Return { spawn "inir" "terminal"; }
     Super+E { spawn "nautilus"; }
-    Super+W { spawn "zen-browser"; }
+    Super+W { spawn "zen"; }
     Super+C { spawn "code"; }
 
     // ═══════════════════════════════════════════════════════════════════════
