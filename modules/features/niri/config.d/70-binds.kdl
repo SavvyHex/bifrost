@@ -61,7 +61,7 @@ binds {
     Mod+Shift+W { spawn "inir" "panelFamily" "cycle"; }
 
     // Session / power dialog.
-    Mod+Shift+Q { spawn "inir" "session" "toggle"; }
+    Mod+Backspace { spawn "inir" "session" "toggle"; }
 
     // ═══════════════════════════════════════════════════════════════════════
     // App launchers
@@ -71,6 +71,7 @@ binds {
     Mod+Return { spawn "inir" "terminal"; }
     Super+E { spawn "nautilus"; }
     Super+W { spawn "inir" "browser"; }
+    Super+C { spawn "code"; }
 
     // ═══════════════════════════════════════════════════════════════════════
     // Window management
