@@ -79,6 +79,8 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     vscode
     nautilus
 
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+
     adwaita-icon-theme
     papirus-icon-theme
     hicolor-icon-theme
