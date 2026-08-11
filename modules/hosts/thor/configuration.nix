@@ -7,7 +7,7 @@ flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     ];
 
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
+  boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "thor";
