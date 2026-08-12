@@ -84,6 +84,7 @@
       bash
       vscode
       nautilus
+      claude-code
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
