@@ -4,6 +4,7 @@
       self.nixosModules.thorHardware
       self.nixosModules.niri
       self.nixosModules.ly
+      self.nixosModules.docker
     ];
 
     boot.loader = {
@@ -25,6 +26,8 @@
     networking.wireless.enable = true;
 
     networking.networkmanager.enable = true;
+
+    networking.firewall.allowedTCPPorts = [ 20128 20129 20132 ];
 
     time.timeZone = "Asia/Kolkata";
 
@@ -50,7 +53,7 @@
     users.users."savvyhex" = {
       isNormalUser = true;
       description = "Saketh Sunil Pai";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
       packages = with pkgs; [];
     };
 
