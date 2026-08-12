@@ -1,10 +1,10 @@
 { self, inputs, ... }: {
   flake.nixosModules.thorConfiguration = { config, pkgs, lib, ... }: {
     imports = [ 
-        self.nixosModules.thorHardware
-        self.nixosModules.niri
-        self.nixosModules.ly
-      ];
+      self.nixosModules.thorHardware
+      self.nixosModules.niri
+      self.nixosModules.ly
+    ];
 
     boot.loader = {
       systemd-boot.enable = false;
@@ -13,6 +13,7 @@
         enable = true;
         device = "nodev";
         efiSupport = true;
+        useOSProber = true;
       };
 
       efi = {
@@ -106,6 +107,18 @@
     ]; 
 
     programs.dconf.enable = true;
+
+    # Audio — required for easyeffects, volume keybinds, and the Volume widget
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    # Battery reporting — required for the battery widget to show a percentage
+    services.upower.enable = true;
 
     services.openssh.enable = true;
 
