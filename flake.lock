@@ -73,6 +73,29 @@
         "type": "github"
       }
     },
+    "nix4nvchad": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvchad-starter": [
+          "nvim"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786241713,
+        "narHash": "sha256-+Ujhw7RDws25N6EYy/G4764k6T0hpGNqEup/bGTQrkc=",
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "rev": "a6277b06ed0de32831ce8e49686fd3a06201a23b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix4nvchad",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1786106723,
@@ -136,13 +159,31 @@
         "type": "github"
       }
     },
+    "nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1786616885,
+        "narHash": "sha256-D89g0Bug9faWU04D5PLtmhSvTSe9PikzcYwHtCgX7/c=",
+        "owner": "SavvyHex",
+        "repo": "nvim",
+        "rev": "9202700c6df1ff9957c1513cc9ab6e6ae43a2226",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SavvyHex",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "inir": "inir",
+        "nix4nvchad": "nix4nvchad",
         "nixpkgs": "nixpkgs",
+        "nvim": "nvim",
         "wrapper-modules": "wrapper-modules",
         "zen-browser": "zen-browser"
       }

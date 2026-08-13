@@ -11,7 +11,10 @@
     home-manager.extraSpecialArgs = { inherit inputs; };
 
     home-manager.users.savvyhex = { config, ... }: {
-      imports = [ inputs.inir.homeModules.inir ];
+      imports = [
+        inputs.inir.homeModules.inir
+        inputs.nix4nvchad.homeManagerModules.default
+      ];
 
       home.stateVersion = "25.05";
 
@@ -19,6 +22,12 @@
         enable = true;
         service.compositor = "niri";
         configSymlink.enable = true;
+      };
+
+      programs.nvchad = {
+        enable = true;
+        hm-activation = true;
+        backup = true;
       };
     };
   };
