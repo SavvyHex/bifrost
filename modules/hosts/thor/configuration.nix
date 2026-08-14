@@ -29,6 +29,11 @@
 
     networking.firewall.allowedTCPPorts = [ 20128 20129 20132 ];
 
+    virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd.qemu.swtpm.enable = true;
+    virtualisation.spiceUSBRedirection.enable = true;
+    programs.virt-manager.enable = true;
+
     time.timeZone = "Asia/Kolkata";
 
     i18n.defaultLocale = "en_IN";
@@ -53,7 +58,7 @@
     users.users."savvyhex" = {
       isNormalUser = true;
       description = "Saketh Sunil Pai";
-      extraGroups = [ "networkmanager" "wheel" "docker" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "kvm" ];
       packages = with pkgs; [];
     };
 
@@ -85,6 +90,9 @@
       vscode
       nautilus
       claude-code
+      freerdp
+      virt-manager
+      dnsmasq
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
