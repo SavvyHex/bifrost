@@ -93,6 +93,7 @@
       freerdp
       virt-manager
       dnsmasq
+      steam
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
