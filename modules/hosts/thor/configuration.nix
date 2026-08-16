@@ -22,6 +22,11 @@
       };
     };
 
+    xdg.portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    };
+
     networking.hostName = "thor";
     networking.wireless.enable = true;
 
@@ -95,6 +100,8 @@
       dnsmasq
       steam
       blender
+      tesseract
+      curl
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
