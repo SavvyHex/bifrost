@@ -103,6 +103,7 @@
       tesseract
       curl
       nodejs
+      mysql-workbench
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
