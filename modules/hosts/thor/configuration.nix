@@ -102,6 +102,7 @@
       blender
       tesseract
       curl
+      nodejs
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
