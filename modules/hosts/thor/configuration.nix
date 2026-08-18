@@ -106,6 +106,7 @@
       curl
       nodejs
       mysql-workbench
+      libqalculate
 
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
