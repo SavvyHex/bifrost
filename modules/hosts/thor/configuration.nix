@@ -32,6 +32,8 @@
 
     networking.networkmanager.enable = true;
 
+    hardware.bluetooth.enable = true;
+    
     networking.firewall.allowedTCPPorts = [ 20128 20129 20132 ];
 
     virtualisation.libvirtd.enable = true;
